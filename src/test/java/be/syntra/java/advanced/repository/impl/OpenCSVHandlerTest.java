@@ -15,18 +15,18 @@ import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.List;
 
-class OpenCSVHandlerTest {
+public class OpenCSVHandlerTest {
     private static final String FILE = "src/test/resources/test.csv";
 
     private OpenCSVHandler csvHandler;
 
     @BeforeEach
-    void setUp() {
+    public void setUp() {
         csvHandler = new OpenCSVHandler();
     }
 
     @Test
-    void readBooksFromCSV() throws IOException {
+    public void readBooksFromCSV() throws IOException {
         // given
         givenACSVFileWithTwoBooks();
 
@@ -38,7 +38,7 @@ class OpenCSVHandlerTest {
     }
 
     @Test
-    void writeBooksToCSV() throws IOException {
+    public void writeBooksToCSV() throws IOException {
         // given
         givenAnEmptyCSVFile();
         List<Book> books = Arrays.asList(aHarryPotterBook(), aMichelleObamaBook());
@@ -51,7 +51,7 @@ class OpenCSVHandlerTest {
     }
 
     @AfterEach
-    void tearDown() {
+    public void tearDown() {
         File file = new File(FILE);
         file.delete();
     }

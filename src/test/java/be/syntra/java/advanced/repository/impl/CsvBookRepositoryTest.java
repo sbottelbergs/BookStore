@@ -13,12 +13,12 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class CsvBookRepositoryTest {
+public class CsvBookRepositoryTest {
 
     private CsvBookRepository repository;
 
     @Test
-    void addBook() {
+    public void addBook() {
         // given
         givenAnEmptyRepository();
 
@@ -30,7 +30,7 @@ class CsvBookRepositoryTest {
     }
 
     @Test
-    void getBookByIsbn() {
+    public void getBookByIsbn() {
         // given
         givenARepositoryWithTwoBooks();
 
@@ -42,7 +42,7 @@ class CsvBookRepositoryTest {
     }
 
     @Test
-    void removeBook() {
+    public void removeBook() {
         // given
         givenARepositoryWithTwoBooks();
         Book book = aFictionBook();
@@ -55,7 +55,7 @@ class CsvBookRepositoryTest {
     }
 
     @Test
-    void getBooksByType() {
+    public void getBooksByType() {
         // given
         givenARepositoryWithAFictionAndTwoNonFictionBooks();
 
@@ -67,7 +67,7 @@ class CsvBookRepositoryTest {
     }
 
     @Test
-    void getAllBooks() {
+    public void getAllBooks() {
         // given
         givenARepositoryWithTwoBooks();
 

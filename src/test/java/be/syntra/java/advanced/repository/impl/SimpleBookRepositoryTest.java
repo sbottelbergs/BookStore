@@ -11,12 +11,12 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-class SimpleBookRepositoryTest {
+public class SimpleBookRepositoryTest {
 
     private SimpleBookRepository repository;
 
     @Test
-    void addBook() {
+    public void addBook() {
         // given
         givenAnEmptyRepository();
         Book book = aFictionBook();
@@ -26,7 +26,7 @@ class SimpleBookRepositoryTest {
     }
 
     @Test
-    void getBookByIsbn() {
+    public void getBookByIsbn() {
         // given
         givenARepositoryWithAFictionAndANonFictionBook();
 
@@ -38,7 +38,7 @@ class SimpleBookRepositoryTest {
     }
 
     @Test
-    void removeBook() {
+    public void removeBook() {
         // given
         givenARepositoryWithAFictionAndANonFictionBook();
 
@@ -50,7 +50,7 @@ class SimpleBookRepositoryTest {
     }
 
     @Test
-    void getBooksByType() {
+    public void getBooksByType() {
         // given
         givenARepositoryWithAFictionAndTwoNonFictionBooks();
 
@@ -62,7 +62,7 @@ class SimpleBookRepositoryTest {
     }
 
     @Test
-    void getAllBooks() {
+    public void getAllBooks() {
         // given
         givenARepositoryWithAFictionAndANonFictionBook();
 
