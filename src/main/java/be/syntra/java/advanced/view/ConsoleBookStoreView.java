@@ -44,6 +44,7 @@ public class ConsoleBookStoreView extends BookStoreView {
                         System.err.println("Unknown command: " + userInput);
                 }
             } catch (IllegalArgumentException e) {
+                e.printStackTrace();
                 System.err.println("Oops. Let's try that again!");
             }
             this.displayOptions();
