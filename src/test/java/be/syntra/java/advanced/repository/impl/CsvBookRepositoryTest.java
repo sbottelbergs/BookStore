@@ -1,7 +1,9 @@
-package be.syntra.java.advanced.repository;
+package be.syntra.java.advanced.repository.impl;
 
 import be.syntra.java.advanced.model.Book;
 import be.syntra.java.advanced.model.BookType;
+import be.syntra.java.advanced.repository.StubbedCSVHandler;
+import static be.syntra.java.advanced.testutil.BookUtil.*;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -101,17 +103,5 @@ class CsvBookRepositoryTest {
                         )
                 ))
         );
-    }
-
-    private Book aFictionBook() {
-        return new Book(1, "Fiction Author", "Fiction Title", BookType.FICTION);
-    }
-
-    private Book aNonFictionBook() {
-        return new Book(2, "Non Fiction Author", "Non Fiction Title", BookType.NON_FICTION);
-    }
-
-    private Book anotherNonFictionBook() {
-        return new Book(0, "A Different Author", "A Different Title", BookType.NON_FICTION);
     }
 }

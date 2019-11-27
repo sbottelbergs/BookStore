@@ -1,7 +1,9 @@
-package be.syntra.java.advanced.repository;
+package be.syntra.java.advanced.repository.impl;
 
 import be.syntra.java.advanced.model.Book;
 import be.syntra.java.advanced.model.BookType;
+import be.syntra.java.advanced.repository.BookRepository;
+import be.syntra.java.advanced.repository.CSVHandler;
 
 import java.util.List;
 import java.util.stream.Collectors;

@@ -1,7 +1,8 @@
-package be.syntra.java.advanced.repository;
+package be.syntra.java.advanced.repository.impl;
 
 import be.syntra.java.advanced.model.Book;
-import be.syntra.java.advanced.model.BookType;
+import static be.syntra.java.advanced.testutil.BookUtil.*;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -14,14 +15,14 @@ import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.List;
 
-class SimpleCSVHandlerTest {
+class OpenCSVHandlerTest {
     private static final String FILE = "src/test/resources/test.csv";
 
-    private SimpleCSVHandler csvHandler;
+    private OpenCSVHandler csvHandler;
 
     @BeforeEach
     void setUp() {
-        csvHandler = new SimpleCSVHandler();
+        csvHandler = new OpenCSVHandler();
     }
 
     @Test
@@ -53,22 +54,6 @@ class SimpleCSVHandlerTest {
     void tearDown() {
         File file = new File(FILE);
         file.delete();
-    }
-
-    private Book aHarryPotterBook() {
-        return new Book(1,
-                "J.K. Rowling",
-                "Harry Potter And The Philosopher’s Stone",
-                BookType.FICTION
-        );
-    }
-
-    private Book aMichelleObamaBook() {
-        return new Book(2,
-                "Michelle Obama",
-                "Becoming - A Guided Journal for Discovering Your Voice",
-                BookType.NON_FICTION
-        );
     }
 
     private void givenAnEmptyCSVFile() throws IOException {
